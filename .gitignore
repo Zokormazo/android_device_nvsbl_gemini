@@ -1,0 +1,4 @@
+proprietary/
+copy-proprietary-files.sh
+*.old
+*~
