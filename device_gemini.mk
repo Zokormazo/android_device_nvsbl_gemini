@@ -106,7 +106,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
         ro.com.google.networklocation=1 \
         ro.setupwizard.enable_bypass=1
 # Inherit tablet dalvik settings
-$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
+#$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
 
 # Inherit common wifi only tablet settings
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
