@@ -30,6 +30,7 @@ lib/hw/hwcomposer.tegra.so
 lib/hw/lights.ventana.so
 lib/hw/sensors.ventana.so
 lib/libakmd.so
+lib/libardrv_dynamic.so
 lib/libasound.so
 lib/libcgdrv.so
 lib/libeglstreamtexture.so
