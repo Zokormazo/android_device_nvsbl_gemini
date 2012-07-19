@@ -2,3 +2,4 @@
 # system.prop for gemini
 #
 
+ro.sf.lcd_density = 160
