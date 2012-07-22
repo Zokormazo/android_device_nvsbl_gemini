@@ -89,7 +89,8 @@ PRODUCT_PACKAGES += \
 	libinvensense_mpl \
         hcitool \
         hciconfig \
-        screencap
+        screencap \
+        FileManager
 
 # Specific properties
 PRODUCT_PROPERTY_OVERRIDES := \
