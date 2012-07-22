@@ -34,19 +34,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     $(LOCAL_PATH)/ramdisk/init.ventana.rc:root/init.ventana.rc\
     $(LOCAL_PATH)/ramdisk/init.ventana.usb.rc:root/init.ventana.usb.rc \
-    $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc \
+    $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc
 
 # General configuration files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/etc/asound.conf:system/etc/asound.conf \
     $(LOCAL_PATH)/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
     $(LOCAL_PATH)/prebuilt/etc/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
     $(LOCAL_PATH)/prebuilt/etc/nvcamera.conf:system/etc/nvcamera.conf \
-    $(LOCAL_PATH)/prebuilt/etc/nvram.txt:system/etc/nvram.txt \
-    $(LOCAL_PATH)/prebuilt/etc/nvram_4329.txt:system/etc/nvram_4329.txt \
-    $(LOCAL_PATH)/prebuilt/etc/nvram_4330.txt:system/etc/nvram_4330.txt \
+    $(LOCAL_PATH)/prebuilt/etc/nvram_4329.txt:system/etc/nvram_4329.txt
 
 # Input device configuration files
 PRODUCT_COPY_FILES += \
@@ -89,7 +86,6 @@ PRODUCT_PACKAGES += \
 	setup_fs \
         audio.a2dp.default \
         libaudioutils \
-        audio.primary.tegra \
 	libinvensense_mpl \
         hcitool \
         hciconfig \
@@ -97,14 +93,14 @@ PRODUCT_PACKAGES += \
 
 # Specific properties
 PRODUCT_PROPERTY_OVERRIDES := \
-    	wifi.interface=wlan0 \
+        wifi.interface=wlan0 \
     	wifi.supplicant_scan_interval=15 \
     	ro.opengles.version=131072 \
 	persist.sys.usb.config=mtp,adb \
 	dalvik.vm.dexopt-data-only=1
         ro.com.google.locationfeatures=1 \
         ro.com.google.networklocation=1 \
-        ro.setupwizard.enable_bypass=1
+
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
 
