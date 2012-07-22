@@ -100,6 +100,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	dalvik.vm.dexopt-data-only=1
         ro.com.google.locationfeatures=1 \
         ro.com.google.networklocation=1 \
+ 	dalvik.vm.dexopt-data-only=1 \
+        persist.sys.root_access=3 \
+        persist.sys.timezone=Europe/Madrid
+
 
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
