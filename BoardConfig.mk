@@ -32,6 +32,7 @@
 
 BOARD_USES_GENERIC_AUDIO := false
 USE_CAMERA_STUB := false
+USE_PROPRIETARY_AUDIO_EXTENSIONS := false
 
 # inherit from the proprietary version
 -include vendor/nvsbl/gemini/BoardConfigVendor.mk
@@ -101,6 +102,10 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 6291456
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 373293056
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 29850022707
 BOARD_FLASH_BLOCK_SIZE := 4096
+
+# Audio Build options
+BOARD_USES_GENERIC_AUDIO := false
+BOARD_USES_ALSA_AUDIO := false
 
 TARGET_KERNEL_CONFIG := cyanogen_gemini_defconfig
 # prebuilt Kernel

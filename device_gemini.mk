@@ -34,11 +34,15 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
     $(LOCAL_PATH)/ramdisk/init.ventana.rc:root/init.ventana.rc\
     $(LOCAL_PATH)/ramdisk/init.ventana.usb.rc:root/init.ventana.usb.rc \
-    $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc
+    $(LOCAL_PATH)/ramdisk/ueventd.ventana.rc:root/ueventd.ventana.rc \
+    $(LOCAL_PATH)/ramdisk/fstab.ventana:root/fstab.ventana
 
 # General configuration files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/prebuilt/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/prebuilt/etc/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml \
     $(LOCAL_PATH)/prebuilt/etc/bluetooth/bdaddr:system/etc/bluetooth/bdaddr \
@@ -87,6 +91,10 @@ PRODUCT_PACKAGES += \
         audio.a2dp.default \
         libaudioutils \
 	libinvensense_mpl \
+        tinymix \
+        tinyplay \
+        tinyrec \
+        audio.primary.ventana \
         hcitool \
         hciconfig \
         screencap
@@ -98,8 +106,6 @@ PRODUCT_PROPERTY_OVERRIDES := \
     	ro.opengles.version=131072 \
 	persist.sys.usb.config=mtp,adb \
 	dalvik.vm.dexopt-data-only=1
-        ro.com.google.locationfeatures=1 \
-        ro.com.google.networklocation=1 \
 
 # Inherit tablet dalvik settings
 #$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
