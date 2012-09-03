@@ -36,5 +36,10 @@
          allow emergency calls to be placed without the IMSI, which is locked in the SIM.
          If so, this should be set to 'false' in an overlay. -->
     <bool name="config_enable_emergency_call_while_sim_locked">false</bool>
-    
+
+    <!-- Package name providing network location support. -->
+    <string name="config_networkLocationProviderPackageName" translatable="false">com.google.android.location</string>
+
+    <!-- Package name providing geocoder API support. -->
+    <string name="config_geocodeProviderPackageName" translatable="false">com.google.android.location</string>
 </resources>
