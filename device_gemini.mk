@@ -108,7 +108,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 	dalvik.vm.dexopt-data-only=1
 
 # Inherit tablet dalvik settings
-#$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 
 # Inherit common wifi only tablet settings
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
