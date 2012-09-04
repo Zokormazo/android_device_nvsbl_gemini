@@ -30,9 +30,8 @@
 # we set USE_PROPRIETARY_AUDIO_EXTENSIONS to true in the proprietary variant as
 # well.
 
-BOARD_USES_GENERIC_AUDIO := false
 USE_CAMERA_STUB := false
-USE_PROPRIETARY_AUDIO_EXTENSIONS := false
+USE_PROPRIETARY_AUDIO_EXTENSIONS := true
 
 # inherit from the proprietary version
 -include vendor/nvsbl/gemini/BoardConfigVendor.mk
